@@ -7,7 +7,7 @@
        "metadata": {
           "description": "Name of VM-Series FW in the Azure portal"
        },
-       "defaultValue": "VM-FW1"
+       "defaultValue": "bparker201VM-FW2"
     },
     "storageAccountName": {
       "type": "string",
@@ -27,7 +27,7 @@
        "metadata": {
           "description": "EXISTING Availability Set name for Firewalls"
        },
-       "defaultValue": "AS-FW"
+       "defaultValue": "bparker201-as-fw"
     },
     "vmSize": {
        "type": "string",
@@ -54,7 +54,7 @@
        "metadata": {
           "description": "PAN OS Version"
        },
-       "defaultValue": "7.1.1"
+       "defaultValue": "latest"
     },
     "imageSku": {
        "type": "string",
@@ -66,18 +66,18 @@
        "metadata": {
           "description": "Firewall License Model"
        },
-       "defaultValue": "bundle2"
+       "defaultValue": "bundle1"
     },
     "virtualNetworkName": { 
       "type": "string",
       "metadata": {
         "description": "Name of the EXISTING Virtual Network (VNET)"
       },
-      "defaultValue": "fwVNET"
+      "defaultValue": "bparker201-vnet"
     },
     "virtualNetworkAddressPrefix": {
       "type": "string",
-      "defaultValue": "192.168.0.0/16",
+      "defaultValue": "10.0.0.0/21",
       "metadata": {
         "description": "EXISTING Virtual network address CIDR"
       }
@@ -91,63 +91,63 @@
     },
     "subnet0Name": {
       "type": "string",
-      "defaultValue": "Mgmt",
+      "defaultValue": "bparker201-mgmt",
       "metadata": {
         "description": "EXISTING Subnet for Management"
       }
     },
     "subnet1Name": {
       "type": "string",
-      "defaultValue": "Untrust",
+      "defaultValue": "bparker201-untrust",
       "metadata": {
         "description": "EXISTING Subnet for Untrust"
       }
     },
     "subnet2Name": {
       "type": "string",
-      "defaultValue": "Trust",
+      "defaultValue": "bparker201-trust",
       "metadata": {
         "description": "EXISTING Subnet for Trust"
       }
     },
     "subnet0Prefix": {
       "type": "string",
-      "defaultValue": "192.168.0.0/24",
+      "defaultValue": "10.0.0.0/24",
       "metadata": {
         "description": "EXISTING Mgmt subnet CIDR"
       }
     },
     "subnet1Prefix": {
       "type": "string",
-      "defaultValue": "192.168.1.0/24",
+      "defaultValue": "10.0.1.0/24",
       "metadata": {
         "description": "EXISTING Untrust subnet CIDR"
       }
     },
     "subnet2Prefix": {
       "type": "string",
-      "defaultValue": "192.168.2.0/24",
+      "defaultValue": "10.0.2.0/24",
       "metadata": {
         "description": "EXISTING Trust subnet CIDR"
       }
     },
     "subnet0StartAddress": {
       "type": "string",
-      "defaultValue": "192.168.0.4",
+      "defaultValue": "10.0.0.6",
       "metadata": {
         "description": "Mgmt subnet static address"
       }
     },
     "subnet1StartAddress": {
       "type": "string",
-      "defaultValue": "192.168.1.4",
+      "defaultValue": "10.0.1.6",
       "metadata": {
         "description": "Untrust subnet static address"
       }
     },
     "subnet2StartAddress": {
       "type": "string",
-      "defaultValue": "192.168.2.4",
+      "defaultValue": "10.0.2.6",
       "metadata": {
         "description": "Trust subnet static address"
       }
@@ -173,7 +173,7 @@
     },
     "nsgName": {
       "type": "string",
-      "defaultValue": "DefaultNSG",
+      "defaultValue": "bparkerDefaultNSG",
       "metadata": {
         "description": "Name of existing Network Security Group for MGMT FW interface"
       }
